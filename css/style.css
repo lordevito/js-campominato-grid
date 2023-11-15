@@ -79,6 +79,21 @@ main{
     border: 1px solid black;
 }
 
+.grid10{
+    width: calc(100% / 10);
+    height: calc(600px / 10);
+}
+
+.grid9{
+    width: calc(100% / 9);
+    height: calc(600px / 9);
+}
+
+.grid7{
+    width: calc(100% / 7);
+    height: calc(600px / 7);
+}
+
 .bg-blue{
     background-color: blue;
 }

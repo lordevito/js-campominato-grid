@@ -1,1 +1,3 @@
 # Esercizio Campo Minato/Campo Fiorito
+
+Primo passo: richiamo dal file index il bottone e ci applico il metodo even listener al click. Creo una funzione per la cella singola dove creo il l'elemento div e glia ggiungo la classe css. Dichiaro una variabile totaleCelle per il numero delle celle. Dichiaro una funzione da usare al click dove rimuovo il titolo iniziale, faccio comparire la griglia. Apro un ciclo dove richiamo la funzione per la creazione della cella, la scrivo nel file index, la appendo alla tabella e infine ci applico il colore blu e le stampo in console ogni volta che si clicca sopra.
