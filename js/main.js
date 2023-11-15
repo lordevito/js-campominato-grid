@@ -41,6 +41,29 @@
 const btnPlay = document.querySelector(`.btn`);
 btnPlay.addEventListener(`click`, play);
 
+let valInput = document.querySelector('select').value;
+console.log(valInput);
+
+function gridDistance (num){
+    const box = [];
+    let i = 1;
+    while(box.length < num){
+        box.push(i);
+        i++;
+    }
+    return box;
+}
+
+let totaleCelle;
+
+if(valInput === 'facile'){
+    totaleCelle = gridDistance(100);
+} else if (valInput === 'avanzato') {
+    totaleCelle = gridDistance(81);
+} else if (valInput === 'difficile') {
+    totaleCelle = gridDistance(49)
+}
+
 //Creo una funzione per la cella singola dove creo il l'elemento div e glia ggiungo la classe css.
 
 function creaCella (){
@@ -51,7 +74,7 @@ function creaCella (){
 
 //Dichiaro una variabile totaleCelle per il numero delle celle.
 
-let totaleCelle = 100;
+
 
 //Dichiaro una funzione da usare al click dove rimuovo il titolo iniziale, faccio comparire la griglia.
 //Apro un ciclo dove richiamo la funzione per la creazione della cella, la scrivo nel file index,
@@ -69,6 +92,13 @@ function play() {
         cella.innerText = (i + 1);
         cella.id = i;
         grigliaTabella.appendChild(cella);
+        if(valInput === 'facile'){
+            div.classList.add('grid10');
+        } else if (valInput === 'avanzato') {
+            div.classList.add('grid9');
+        } else if (valInput === 'difficile') {
+            div.classList.add('grid7');
+        }
         cella.addEventListener(`click`, (function (index) {
             return function () {
                 cella.classList.add(`bg-blue`);
