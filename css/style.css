@@ -64,7 +64,8 @@ main{
     background-color: #7fffd4;
 }
 
-.tabel{
+.table{
+    margin: 50px 0px;
     width: 600px;
     height: 600px;
     display: flex;
@@ -76,4 +77,8 @@ main{
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
+}
+
+.bg-blue{
+    background-color: blue;
 }
